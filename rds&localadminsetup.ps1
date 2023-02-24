@@ -9,10 +9,12 @@ try{
         Add-LocalGroupMember -Group "Remote Desktop Users" -Member $user
         Add-LocalGroupMember -Group "Administrators" -Member $user
     }
-    #This adds each user in the cvs to the local Remote Desktop Users group. 
+    #This adds each user in the cvs to the local Administrators and Remote Desktop Users group. 
     Write-Host "Script completed successfully." -ForegroundColor Green
     }
     
 catch {
     Write-Host "An error occured: $_" -ForegroundColor Red
+
+    #Throws and error if it fails.
 }
