@@ -14,7 +14,7 @@ try{
     }
     
 catch {
-    Write-Host "An error occured: $_" -ForegroundColor Red
+    Write-Host "An error occured: $($_.Exception.Message)" -ForegroundColor Red
 
     #Throws and error if it fails.
 }
